@@ -92,9 +92,9 @@ const FooterComponent = () => {
               <Link to={"/"} onClick={downloadPdf} className="duration-300 hover:bg-sky-700 hover:px-10 hover:py-2 hover:rounded-md">
                 Download CV
               </Link>
-              <a href="/project" className="duration-300 hover:bg-sky-700 hover:px-10 hover:py-2 hover:rounded-md">
+              <Link to={"/project#project"} className="duration-300 hover:bg-sky-700 hover:px-10 hover:py-2 hover:rounded-md">
                 Project
-              </a>
+              </Link>
             </animated.div>
           </div>
         </div>
