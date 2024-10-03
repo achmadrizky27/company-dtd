@@ -16,7 +16,7 @@ const NavbarComponent = () => {
 
   return (
     <nav className="fixed top-0 w-full font-poppins tracking-wider z-50">
-      <div className="max-w-7xl mx-auto px-4 bg-white">
+      <div className="max-w-7xl mx-auto px-3 bg-white">
         <div className="flex justify-between items-center py-4">
           <p>My Portfolio</p>
 

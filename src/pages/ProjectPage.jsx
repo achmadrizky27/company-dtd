@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ConstPortfolioComponent from "../components/ConstPortfolioComponent";
-import CopyrightComponent from "../components/CopyrightComponent";
 import AutoScroll from "../components/AutoScrollComponent";
 import ImageSliderComponent from "../components/ImageSliderComponent";
+import FooterComponent from "../components/FooterComponent";
 
 const ProjectPage = () => {
   // Pop Up (Id)
@@ -83,7 +83,7 @@ const ProjectPage = () => {
           <hr className="border-2 rounded-full" />
 
           {/* Project - Front-End Web Development */}
-          <div className="flex flex-wrap gap-4 items-center justify-center overflow-y-auto p-5 w-auto h-48">
+          <div className="flex flex-wrap gap-4 items-center justify-center overflow-y-auto p-5 w-auto h-96">
             {/* Literasik */}
             <div className="w-auto" onClick={() => handlePopup("literasik")}>
               <div className="bg-sky-600 cursor-pointer duration-300 flex flex-col gap-3 group p-3 rounded-md relative lg:flex-row hover:p-5">
@@ -173,7 +173,7 @@ const ProjectPage = () => {
           <hr className="border-2 rounded-full" />
 
           {/* Project - Graphic Design */}
-          <div className="flex flex-wrap gap-4 items-center justify-center overflow-y-auto p-5 w-auto h-48">
+          <div className="flex flex-wrap gap-4 items-center justify-center overflow-y-auto p-5 w-auto h-96">
             {/* Wav Drape */}
             <div className="w-auto" onClick={() => handlePopup("wavDrape")}>
               <div className="bg-sky-600 cursor-pointer duration-300 flex flex-col gap-3 group p-3 rounded-md relative lg:flex-row hover:p-5">
@@ -259,7 +259,7 @@ const ProjectPage = () => {
           <hr className="border-2 rounded-full" />
         </div>
       </div>
-      <CopyrightComponent />
+      <FooterComponent />
     </section>
   );
 };
