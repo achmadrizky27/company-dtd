@@ -57,7 +57,7 @@ const ProjectPage = () => {
         </div>
         <div className="flex gap-4 items-center justify-between text-md">
           <Link to={"/"} className="duration-300 hover:border-b hover:border-sky-500 hover:text-sky-500 ">
-            Back to Home
+            Home
           </Link>
           <Link to={"/"} onClick={handleExternalLinktree} className="duration-300 hover:border-b hover:border-sky-500 hover:text-sky-500">
             Contact Me
@@ -200,13 +200,16 @@ const ProjectPage = () => {
                   <div className="border flex flex-col gap-1 items-center p-5 rounded-md shadow-lg">
                     <img src="./project-portfolio/graphic-design/wav-drape.png" alt="wav-drape" className="border p-2 rounded-md w-auto lg:w-56" />
                     <p className="text-black text-lg">Wav Drape</p>
-                    <p className="text-gray-700 text-justify text-sm">...</p>
+                    <p className="text-gray-700 text-justify text-sm">
+                      The logo features a modern, minimalistic design with geometric shapes that abstractly represent the letters "W" and "D" for the brand "WAV DRAPE." Its deep brown color conveys sophistication, while the clean, uppercase
+                      font for the brand name below adds a professional touch, blending creativity with a contemporary aesthetic.
+                    </p>
                   </div>
                 </div>
               </div>
             )}
 
-            {/* Pienotes */}
+            {/* Mangan Sedulur */}
             <div className="w-auto" onClick={() => handlePopup("manganSedulur")}>
               <div className="bg-sky-600 cursor-pointer duration-300 flex flex-col gap-3 group p-3 rounded-md relative lg:flex-row hover:p-5">
                 <img src="./project-portfolio/graphic-design/mangan-sedulur.png" alt="mangan-sedulur" className="rounded-md w-auto lg:w-28" />
@@ -232,7 +235,10 @@ const ProjectPage = () => {
                   <div className="border flex flex-col gap-1 items-center p-5 rounded-md shadow-lg">
                     <img src="./project-portfolio/graphic-design/mangan-sedulur.png" alt="mangan-sedulur" className="border p-2 rounded-md w-auto lg:w-56" />
                     <p className="text-black text-lg">Mangan Sedulur</p>
-                    <p className="text-gray-700 text-justify text-sm">...</p>
+                    <p className="text-gray-700 text-justify text-sm">
+                      The logo features stylized letters "M" and "A" in a modern, symmetrical design with a rich gold color, conveying elegance. An icon resembling a plate above the "A" symbolizes food, while the brand name "Mangan Sedulur"
+                      is presented below in a clean, contemporary font, enhancing its sophisticated and approachable aesthetic.
+                    </p>
                   </div>
                 </div>
               </div>
