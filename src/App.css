@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+svg {
+  font-size: 1.5rem;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.bg-project {
+  background-image: url("../profile/bg-project.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.9);
+}
