@@ -105,7 +105,7 @@ const ProjectPage = () => {
             </div>
             {popups["literasik"] && (
               <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                <div className="bg-white flex flex-col gap-5 p-6 rounded-lg max-w-lg mx-7 w-auto">
+                <div className="bg-white flex flex-col gap-5 p-6 rounded-lg max-w-lg mx-3 w-auto">
                   <button className="bg-sky-500 duration-300 px-5 py-1 rounded-md w-full hover:bg-sky-700 " onClick={() => handlePopup("literasik")}>
                     Close
                   </button>
@@ -143,7 +143,7 @@ const ProjectPage = () => {
             </div>
             {popups["pienotes"] && (
               <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                <div className="bg-white flex flex-col gap-5 p-6 rounded-lg max-w-lg mx-7 w-auto">
+                <div className="bg-white flex flex-col gap-5 p-6 rounded-lg max-w-lg mx-3 w-auto">
                   <button className="bg-sky-500 duration-300 px-5 py-1 rounded-md w-full hover:bg-sky-700 " onClick={() => handlePopup("pienotes")}>
                     Close
                   </button>
@@ -193,7 +193,7 @@ const ProjectPage = () => {
             </div>
             {popups["wavDrape"] && (
               <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                <div className="bg-white flex flex-col gap-5 p-6 rounded-lg max-w-lg mx-7 w-auto">
+                <div className="bg-white flex flex-col gap-5 p-6 rounded-lg max-w-lg mx-3 w-auto">
                   <button className="bg-sky-500 duration-300 px-5 py-1 rounded-md w-full hover:bg-sky-700 " onClick={() => handlePopup("wavDrape")}>
                     Close
                   </button>
@@ -228,7 +228,7 @@ const ProjectPage = () => {
             </div>
             {popups["manganSedulur"] && (
               <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                <div className="bg-white flex flex-col gap-5 p-6 rounded-lg max-w-lg mx-7 w-auto">
+                <div className="bg-white flex flex-col gap-5 p-6 rounded-lg max-w-lg mx-3 w-auto">
                   <button className="bg-sky-500 duration-300 px-5 py-1 rounded-md w-full hover:bg-sky-700 " onClick={() => handlePopup("manganSedulur")}>
                     Close
                   </button>
