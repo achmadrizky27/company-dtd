@@ -28,12 +28,12 @@ const FooterComponent = () => {
   };
 
   // Download File PDF
-  const downloadPdf = () => {
-    const link = document.createElement("a");
-    link.href = `public/my-cv.pdf`;
-    link.download = "my-cv.pdf";
-    link.click();
-  };
+  // const downloadPdf = () => {
+  //   const link = document.createElement("a");
+  //   link.href = `public/my-cv.pdf`;
+  //   link.download = "my-cv.pdf";
+  //   link.click();
+  // };
 
   return (
     <footer id="contact" className="bg-sky-800 font-poppins text-white tracking-wider w-full">
@@ -89,7 +89,7 @@ const FooterComponent = () => {
               <Link to={"#contact"} className="duration-300 hover:bg-sky-700 hover:px-10 hover:py-2 hover:rounded-md">
                 Contact
               </Link>
-              <Link to={"/"} onClick={downloadPdf} className="duration-300 hover:bg-sky-700 hover:px-10 hover:py-2 hover:rounded-md">
+              <Link to={"/"} className="duration-300 hover:bg-sky-700 hover:px-10 hover:py-2 hover:rounded-md">
                 Download CV
               </Link>
               <Link to={"/project#project"} className="duration-300 hover:bg-sky-700 hover:px-10 hover:py-2 hover:rounded-md">
