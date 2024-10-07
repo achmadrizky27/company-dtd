@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-function AutoScroll() {
+function AutoScrollComponent() {
   const { hash } = useLocation();
 
   useEffect(() => {
@@ -16,4 +16,4 @@ function AutoScroll() {
   return null;
 }
 
-export default AutoScroll;
+export default AutoScrollComponent;

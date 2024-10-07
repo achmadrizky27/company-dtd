@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ConstPortfolioComponent from "../components/ConstPortfolioComponent";
-import AutoScroll from "../components/AutoScrollComponent";
+import AutoScrollComponent from "../components/AutoScrollComponent";
 import ImageSliderComponent from "../components/ImageSliderComponent";
 import FooterComponent from "../components/FooterComponent";
 
@@ -46,7 +46,7 @@ const ProjectPage = () => {
   return (
     <section id="project" className="font-poppins text-white tracking-wider">
       {/* Auto Scroll by Hash */}
-      <AutoScroll />
+      <AutoScrollComponent />
 
       {/* Header */}
       <div className="bg-project flex flex-col gap-4 items-center justify-center max-w-7xl mx-auto px-3 py-32 w-full lg:px-7">
