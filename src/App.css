@@ -11,9 +11,9 @@ body {
   scroll-behavior: smooth;
 }
 
-.bg-project {
-  background-image: url("../profile/bg-project.jpg");
+/* Background Home */
+.bg-home {
+  background-image: url("../profile/bg-home.png");
   background-position: center;
   background-size: cover;
-  filter: brightness(0.9);
 }

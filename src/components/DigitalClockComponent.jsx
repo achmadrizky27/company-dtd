@@ -12,14 +12,18 @@ const DigitalClockComponent = () => {
   }, []);
 
   const formatTime = (date) => {
-    const hours = date.getHours().toString().padStart(2, "0");
+    let hours = date.getHours();
     const minutes = date.getMinutes().toString().padStart(2, "0");
     const seconds = date.getSeconds().toString().padStart(2, "0");
-    const times = "WIB";
-    return `${hours} : ${minutes} : ${seconds} : ${times}`;
+    const ampm = hours >= 12 ? "PM" : "AM";
+
+    // Convert to 12-hour format
+    hours = hours % 12 || 12; // If hour is 0 (midnight), show as 12
+
+    return `${hours.toString().padStart(2, "0")} : ${minutes} : ${seconds} ${ampm}`;
   };
 
-  return <div className="border-2 border-sky-500 duration-300 px-2 py-0.5 rounded-md text-md hover:shadow-lg hover:shadow-sky-200">{formatTime(time)}</div>;
+  return <div className="font-bold font-monserrat text-md">{formatTime(time)}</div>;
 };
 
 export default DigitalClockComponent;

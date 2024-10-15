@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const NavbarComponent = () => {
@@ -14,30 +14,61 @@ const NavbarComponent = () => {
     setIsOpen(!isOpen);
   };
 
+  // Dinamis Color Navbar
+  const [navBackground, setNavBackground] = useState("bg-transparent");
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      let scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute("id");
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          switch (sectionId) {
+            case "home":
+              setNavBackground("bg-white");
+              break;
+            case "about":
+              setNavBackground("bg-white");
+              break;
+            case "service":
+              setNavBackground("bg-white");
+              break;
+            case "project":
+              setNavBackground("");
+              break;
+            case "contact":
+              setNavBackground("");
+              break;
+            default:
+              setNavBackground("bg-transparent");
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <nav className="fixed top-0 w-full font-poppins tracking-wider z-50">
-      <div className="max-w-7xl mx-auto px-3 bg-white">
-        <div className="flex justify-between items-center py-4">
-          <p>My Portfolio</p>
-
-          {/* Menu Items */}
-          <div className="hidden md:flex space-x-4">
-            <Link to={"#home"} smooth={true} duration={100} className={`${activeId === "home" ? "border-b-2 border-sky-500 translate-y-0.5" : "duration-300 hover:text-blue-500"}`} onClick={() => handleSetActive("home")}>
-              Home
-            </Link>
-            <Link to={"#service"} smooth={true} duration={100} className={`${activeId === "service" ? "border-b-2 border-sky-500 translate-y-0.5" : "duration-300 hover:text-blue-500"}`} onClick={() => handleSetActive("service")}>
-              Service
-            </Link>
-            <Link to={"#contact"} smooth={true} duration={100} className={`${activeId === "contact" ? "border-b-2 border-sky-500 translate-y-0.5" : "duration-300 hover:text-blue-500"}`} onClick={() => handleSetActive("contact")}>
-              Contact
-            </Link>
-            <Link to={"/project#project"} smooth={true} duration={100} className={`${activeId === "project" ? "border-b-2 border-sky-500 translate-y-0.5" : "duration-300 hover:text-sky-500"}`} onClick={() => handleSetActive("project")}>
-              My Project
-            </Link>
+      <div className={`max-w-7xl mx-auto px-3 text-slate-600 lg:px-7 ${navBackground}`}>
+        <div className="flex justify-between items-center py-5">
+          <div className="flex gap-2 items-center">
+            <img src="../profile/logo-non-bg.png" alt="logo-non-bg" width={30} />
+            <p className="flex sm:hidden">DraTechDev</p>
+            <p className="hidden sm:flex">Drafire Tech Development</p>
           </div>
 
           {/* Hamburger Icon */}
-          <div className="md:hidden">
+          <div>
             <Link onClick={toggleMenu} className="focus:outline-none focus:text-blue-300 hover:text-blue-200">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -48,24 +79,21 @@ const NavbarComponent = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden py-3 text-sm">
-            <Link to={"#home"} smooth={true} duration={100} className={`block py-2 px-3 ${activeId === "home" ? "border-b-2 border-sky-500 px-5" : "duration-300 hover:text-blue-500"}`} onClick={() => handleSetActive("home")}>
+          <div className="bg-black bg-opacity-75 py-3 rounded-md text-sm text-white">
+            <Link to={"#home"} smooth={true} duration={100} className={`block py-2 px-4 ${activeId === "home" ? "border-b-2 border-blue-200 px-8" : "duration-300 hover:text-blue-200"}`} onClick={() => handleSetActive("home")}>
               Home
             </Link>
-            <Link to={"#service"} smooth={true} duration={100} className={`block py-2 px-3 ${activeId === "service" ? "border-b-2 border-sky-500 px-5" : "duration-300 hover:text-blue-500"}`} onClick={() => handleSetActive("service")}>
+            <Link to={"#about"} smooth={true} duration={100} className={`block py-2 px-4 ${activeId === "about" ? "border-b-2 border-blue-200 px-8" : "duration-300 hover:text-blue-200"}`} onClick={() => handleSetActive("about")}>
+              About
+            </Link>
+            <Link to={"#service"} smooth={true} duration={100} className={`block py-2 px-4 ${activeId === "service" ? "border-b-2 border-blue-200 px-8" : "duration-300 hover:text-blue-200"}`} onClick={() => handleSetActive("service")}>
               Service
             </Link>
-            <Link to={"#contact"} smooth={true} duration={100} className={`block py-2 px-3 ${activeId === "contact" ? "border-b-2 border-sky-500 px-5" : "duration-300 hover:text-blue-500"}`} onClick={() => handleSetActive("contact")}>
-              Contact
+            <Link to={"#project"} smooth={true} duration={100} className={`block py-2 px-4 ${activeId === "project" ? "border-b-2 border-blue-200 px-8" : "duration-300 hover:text-blue-200"}`} onClick={() => handleSetActive("project")}>
+              Project
             </Link>
-            <Link
-              to={"/project#project"}
-              smooth={true}
-              duration={100}
-              className={`block py-2 px-3 ${activeId === "project" ? "border-b-2 border-sky-500 px-5" : "duration-300 hover:text-blue-500"}`}
-              onClick={() => handleSetActive("project")}
-            >
-              My Project
+            <Link to={"#contact"} smooth={true} duration={100} className={`block py-2 px-4 ${activeId === "contact" ? "border-b-2 border-blue-200 px-8" : "duration-300 hover:text-blue-200"}`} onClick={() => handleSetActive("contact")}>
+              Contact
             </Link>
           </div>
         )}
