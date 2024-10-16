@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const NavbarComponent = () => {
   // Set Active -> Link (Id)
-  const [activeId, setActiveId] = useState("home");
-  const handleSetActive = (id) => {
-    setActiveId(id);
-  };
+  // const [activeId, setActiveId] = useState("home");
+  // const handleSetActive = (id) => {
+  //   setActiveId(id);
+  // };
 
   // Hamburger Menu
   const [isOpen, setIsOpen] = useState(false);
@@ -25,23 +25,22 @@ const NavbarComponent = () => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute("id");
-
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           switch (sectionId) {
             case "home":
-              setNavBackground("bg-transparent text-white");
+              setNavBackground("");
               break;
             case "about":
-              setNavBackground("bg-black bg-opacity-75");
+              setNavBackground("bg-blue-900 bg-opacity-75");
               break;
             case "service":
-              setNavBackground("");
+              setNavBackground("bg-blue-900 bg-opacity-75");
               break;
             case "project":
-              setNavBackground("");
+              setNavBackground("bg-blue-900 bg-opacity-75");
               break;
             case "contact":
-              setNavBackground("");
+              setNavBackground("bg-blue-900 bg-opacity-75");
               break;
             default:
               setNavBackground("bg-transparent");
@@ -49,18 +48,16 @@ const NavbarComponent = () => {
         }
       });
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full font-poppins text-white tracking-wider z-50 ${navBackground}`}>
-      <div className="max-w-7xl mx-auto px-3 md:px-7">
-        <div className="flex justify-between items-center py-5">
+    <nav className="fixed top-0 w-full font-poppins text-white tracking-wider z-50">
+      <div className={`max-w-7xl mx-auto px-3 py-5 md:px-7 ${navBackground}`}>
+        <div className="flex justify-between items-center">
           <div className="flex gap-2 items-center">
             <img src="../profile/logo-non-bg.png" alt="logo-non-bg" width={30} />
             <p className="flex sm:hidden">DraTechDev</p>
@@ -79,20 +76,20 @@ const NavbarComponent = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="bg-black bg-opacity-75 py-3 rounded-md text-sm text-white">
-            <Link to={"#home"} smooth={true} duration={100} className={`block py-2 px-4 ${activeId === "home" ? "border-b-2 border-blue-200 px-8" : "duration-300 hover:text-blue-200"}`} onClick={() => handleSetActive("home")}>
+          <div className="bg-black bg-opacity-75 border border-white my-3 py-2 rounded-md text-sm text-white">
+            <Link to={"#home"} smooth={true} duration={100} className="block py-2 px-4 duration-300 hover:text-blue-500">
               Home
             </Link>
-            <Link to={"#about"} smooth={true} duration={100} className={`block py-2 px-4 ${activeId === "about" ? "border-b-2 border-blue-200 px-8" : "duration-300 hover:text-blue-200"}`} onClick={() => handleSetActive("about")}>
+            <Link to={"#about"} smooth={true} duration={100} className="block py-2 px-4 duration-300 hover:text-blue-500">
               About
             </Link>
-            <Link to={"#service"} smooth={true} duration={100} className={`block py-2 px-4 ${activeId === "service" ? "border-b-2 border-blue-200 px-8" : "duration-300 hover:text-blue-200"}`} onClick={() => handleSetActive("service")}>
+            <Link to={"#service"} smooth={true} duration={100} className="block py-2 px-4 duration-300 hover:text-blue-500">
               Service
             </Link>
-            <Link to={"#project"} smooth={true} duration={100} className={`block py-2 px-4 ${activeId === "project" ? "border-b-2 border-blue-200 px-8" : "duration-300 hover:text-blue-200"}`} onClick={() => handleSetActive("project")}>
+            <Link to={"#project"} smooth={true} duration={100} className="block py-2 px-4 duration-300 hover:text-blue-500">
               Project
             </Link>
-            <Link to={"#contact"} smooth={true} duration={100} className={`block py-2 px-4 ${activeId === "contact" ? "border-b-2 border-blue-200 px-8" : "duration-300 hover:text-blue-200"}`} onClick={() => handleSetActive("contact")}>
+            <Link to={"#contact"} smooth={true} duration={100} className="block py-2 px-4 duration-300 hover:text-blue-500">
               Contact
             </Link>
           </div>

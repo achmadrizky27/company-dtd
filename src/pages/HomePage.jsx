@@ -67,9 +67,9 @@ const HomePage = () => {
     <Layout id="home">
       {/* Home */}
       <section id="home" className="font-poppins tracking-wider text-white">
-        <div className="bg-home flex flex-col gap-4 items-start justify-center max-w-7xl px-3 py-32 md:py-52 md:px-7">
+        <div className="bg-home flex flex-col gap-4 items-start justify-center max-w-7xl px-3 py-96 md:max-h-screen md:px-7">
           <div className="flex flex-col gap-2 w-full md:w-1/2">
-            <p className="font-bold text-xl md:text-2xl">Grafire Tech Development</p>
+            <p className="font-bold text-3xl md:text-5xl">Grafire Tech Development</p>
             <p className="font-bold text-xl md:text-2xl">
               Produk Digital, <RoleSwitcher />{" "}
             </p>
@@ -77,14 +77,14 @@ const HomePage = () => {
             <p className="text-sm">Karya Produk Digital Untuk Masa Depan Indonesia</p>
           </div>
           <Link to={"#about"} className="bg-blue-500 duration-300 px-4 py-1 rounded-full hover:bg-blue-700 hover:translate-x-1">
-            Who we are?
+            Siapa Kami?
           </Link>
         </div>
       </section>
 
       {/* About */}
       <section id="about" className="font-poppins tracking-wider text-slate-700">
-        <div className="flex flex-col gap-10 items-center justify-center max-w-7xl px-3 py-20 md:px-7">
+        <div className="flex flex-col gap-10 items-center justify-center max-w-7xl px-3 py-20 md:py-32 md:px-7">
           {/* Row 1 */}
           <div className="flex flex-col gap-10 items-center justify-between w-full md:flex-row md:gap-0">
             <div className="flex flex-col gap-4 items-start justify-center w-full md:w-1/2">
@@ -135,11 +135,11 @@ const HomePage = () => {
         <div className="bg-blue-100 flex flex-col gap-4 items-center justify-center max-w-7xl px-3 py-32 md:py-40 md:px-7"></div>
       </section>
 
-      <animated.div style={translateY} className="flex flex-col gap-2 items-start justify-start text-start w-full">
+      {/* <animated.div style={translateY} className="flex flex-col gap-2 items-start justify-start text-start w-full">
         <div className="flex flex-row-reverse font-bold gap-4 items-center space-y-2">
           <div className="flex flex-col">
-            {/* <p className="text-1xl md:text-2xl">Welcome, everyone!</p>
-                <p className="text-blue-500 text-xl md:text-4xl">Drafire Tech Development</p> */}
+            <p className="text-1xl md:text-2xl">Welcome, everyone!</p>
+            <p className="text-blue-500 text-xl md:text-4xl">Drafire Tech Development</p>
           </div>
           <div className="flex flex-col gap-5">
             <a href="https://www.instagram.com/rizkyach_" className="duration-300 hover:p-2 hover:rounded-full">
@@ -164,7 +164,7 @@ const HomePage = () => {
             </a>
           </div>
         </div>
-      </animated.div>
+      </animated.div> */}
     </Layout>
   );
 };
