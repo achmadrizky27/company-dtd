@@ -29,7 +29,7 @@ const NavbarComponent = () => {
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           switch (sectionId) {
             case "home":
-              setNavBackground("");
+              setNavBackground("text-white");
               break;
             case "about":
               setNavBackground("bg-white text-slate-700");
