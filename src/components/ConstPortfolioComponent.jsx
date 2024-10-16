@@ -18,7 +18,7 @@ const ConstPortfolioComponent = ({ target, duration }) => {
     return () => clearInterval(timer);
   }, [target, duration]);
 
-  return <span className="text-1xl">{count}</span>;
+  return <span className="text-3xl">{count}</span>;
 };
 
 export default ConstPortfolioComponent;

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ConstPortfolioComponent from "../components/ConstPortfolioComponent";
 import AutoScrollComponent from "../components/AutoScrollComponent";
-import ImageSliderComponent from "../components/ImageSliderComponent";
 import FooterComponent from "../components/FooterComponent";
 
 const ProjectPage = () => {
@@ -16,26 +15,26 @@ const ProjectPage = () => {
   };
 
   // Picture Front-End Web Development
-  const picturePienotes = [
-    "./project-portfolio/fe-web-dev/pienotes/pienotes-1.png",
-    "./project-portfolio/fe-web-dev/pienotes/pienotes-2.png",
-    "./project-portfolio/fe-web-dev/pienotes/pienotes-3.png",
-    "./project-portfolio/fe-web-dev/pienotes/pienotes-4.png",
-  ];
+  // const picturePienotes = [
+  //   "./project-portfolio/fe-web-dev/pienotes/pienotes-1.png",
+  //   "./project-portfolio/fe-web-dev/pienotes/pienotes-2.png",
+  //   "./project-portfolio/fe-web-dev/pienotes/pienotes-3.png",
+  //   "./project-portfolio/fe-web-dev/pienotes/pienotes-4.png",
+  // ];
 
-  const pictureLiterasik = [
-    "./project-portfolio/fe-web-dev/literasik/literasik-1.png",
-    "./project-portfolio/fe-web-dev/literasik/literasik-2.png",
-    "./project-portfolio/fe-web-dev/literasik/literasik-3.png",
-    "./project-portfolio/fe-web-dev/literasik/literasik-4.png",
-    "./project-portfolio/fe-web-dev/literasik/literasik-5.png",
-    "./project-portfolio/fe-web-dev/literasik/literasik-6.png",
-    "./project-portfolio/fe-web-dev/literasik/literasik-7.png",
-    "./project-portfolio/fe-web-dev/literasik/literasik-8.png",
-    "./project-portfolio/fe-web-dev/literasik/literasik-9.png",
-    "./project-portfolio/fe-web-dev/literasik/literasik-10.png",
-    "./project-portfolio/fe-web-dev/literasik/literasik-11.png",
-  ];
+  // const pictureLiterasik = [
+  //   "./project-portfolio/fe-web-dev/literasik/literasik-1.png",
+  //   "./project-portfolio/fe-web-dev/literasik/literasik-2.png",
+  //   "./project-portfolio/fe-web-dev/literasik/literasik-3.png",
+  //   "./project-portfolio/fe-web-dev/literasik/literasik-4.png",
+  //   "./project-portfolio/fe-web-dev/literasik/literasik-5.png",
+  //   "./project-portfolio/fe-web-dev/literasik/literasik-6.png",
+  //   "./project-portfolio/fe-web-dev/literasik/literasik-7.png",
+  //   "./project-portfolio/fe-web-dev/literasik/literasik-8.png",
+  //   "./project-portfolio/fe-web-dev/literasik/literasik-9.png",
+  //   "./project-portfolio/fe-web-dev/literasik/literasik-10.png",
+  //   "./project-portfolio/fe-web-dev/literasik/literasik-11.png",
+  // ];
 
   // Handle External Link
   const handleExternalLinktree = (e) => {

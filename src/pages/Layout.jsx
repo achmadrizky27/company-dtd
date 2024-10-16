@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
           <main>{children}</main>
         </div>
       </div>
-      <FooterComponent />
+      {/* <FooterComponent /> */}
     </React.Fragment>
   );
 };
