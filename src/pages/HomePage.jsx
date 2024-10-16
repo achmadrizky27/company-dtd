@@ -64,7 +64,7 @@ const HomePage = () => {
   // };
 
   return (
-    <Layout>
+    <Layout id="home">
       {/* Home */}
       <section id="home" className="font-poppins tracking-wider text-white">
         <div className="bg-home flex flex-col gap-4 items-start justify-center max-w-7xl px-3 py-32 md:py-52 md:px-7">
