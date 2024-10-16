@@ -32,7 +32,7 @@ const NavbarComponent = () => {
               setNavBackground("bg-transparent text-white");
               break;
             case "about":
-              setNavBackground("bg-white text-slate-700");
+              setNavBackground("bg-black bg-opacity-75");
               break;
             case "service":
               setNavBackground("");
