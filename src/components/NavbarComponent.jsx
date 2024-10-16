@@ -59,7 +59,7 @@ const NavbarComponent = () => {
 
   return (
     <nav className="fixed top-0 w-full font-poppins tracking-wider z-50">
-      <div className={`max-w-7xl mx-auto px-3 text-white md:px-7 ${navBackground}`}>
+      <div className={`max-w-7xl mx-auto px-3 md:px-7 ${navBackground}`}>
         <div className="flex justify-between items-center py-5">
           <div className="flex gap-2 items-center">
             <img src="../profile/logo-non-bg.png" alt="logo-non-bg" width={30} />
