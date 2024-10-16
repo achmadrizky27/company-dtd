@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <React.Fragment>
       <AutoScroll />
       <NavbarComponent />
-      <div>
+      <div id="home">
         <div className="container items-center justify-center mx-auto max-w-screen-xl">
           <main>{children}</main>
         </div>
