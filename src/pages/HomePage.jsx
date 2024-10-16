@@ -65,7 +65,7 @@ const HomePage = () => {
 
   return (
     <Layout id="home">
-      {/* Home */}
+      {/* Home - Done */}
       <section id="home" className="font-poppins tracking-wider text-white">
         <div className="bg-home flex flex-col gap-4 items-start justify-center max-w-7xl px-3 py-96 md:max-h-screen md:px-7">
           <div className="flex flex-col gap-2 w-full md:w-1/2">
@@ -82,9 +82,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* About */}
+      {/* About - Done*/}
       <section id="about" className="font-poppins tracking-wider text-slate-700">
-        <div className="flex flex-col gap-10 items-center justify-center max-w-7xl px-3 py-20 md:py-32 md:px-7">
+        <div className="flex flex-col gap-10 items-center justify-center max-w-7xl px-3 py-28 md:py-32 md:px-7">
           {/* Row 1 */}
           <div className="flex flex-col gap-10 items-center justify-between w-full md:flex-row md:gap-0">
             <div className="flex flex-col gap-4 items-start justify-center w-full md:w-1/2">
