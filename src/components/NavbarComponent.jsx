@@ -29,7 +29,7 @@ const NavbarComponent = () => {
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           switch (sectionId) {
             case "home":
-              setNavBackground("text-white");
+              setNavBackground("bg-transparent text-white");
               break;
             case "about":
               setNavBackground("bg-white text-slate-700");
@@ -61,7 +61,7 @@ const NavbarComponent = () => {
     <nav className="fixed top-0 w-full font-poppins tracking-wider z-50">
       <div className={`max-w-7xl mx-auto px-3 md:px-7 ${navBackground}`}>
         <div className="flex justify-between items-center py-5">
-          <div className="flex gap-2 items-center text-white">
+          <div className="flex gap-2 items-center">
             <img src="../profile/logo-non-bg.png" alt="logo-non-bg" width={30} />
             <p className="flex sm:hidden">DraTechDev</p>
             <p className="hidden sm:flex">Drafire Tech Development</p>
