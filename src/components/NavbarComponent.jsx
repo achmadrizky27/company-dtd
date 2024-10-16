@@ -31,16 +31,16 @@ const NavbarComponent = () => {
               setNavBackground("");
               break;
             case "about":
-              setNavBackground("bg-blue-900 bg-opacity-75");
+              setNavBackground("bg-blue-900 bg-opacity-90");
               break;
             case "service":
-              setNavBackground("bg-blue-900 bg-opacity-75");
+              setNavBackground("bg-blue-900 bg-opacity-90");
               break;
             case "project":
-              setNavBackground("bg-blue-900 bg-opacity-75");
+              setNavBackground("bg-blue-900 bg-opacity-90");
               break;
             case "contact":
-              setNavBackground("bg-blue-900 bg-opacity-75");
+              setNavBackground("bg-blue-900 bg-opacity-90");
               break;
             default:
               setNavBackground("bg-transparent");
