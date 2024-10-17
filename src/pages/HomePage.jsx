@@ -572,9 +572,8 @@ const HomePage = () => {
                       <img src="./project-portfolio/hairidea.png" alt="hairidea" className="border p-2 rounded-md w-auto lg:w-56" />
                       <p className="text-black text-lg">Hair Idea</p>
                       <p className="text-gray-700 text-justify text-md">
-                        HairIdea adalah sebuah situs website yang dirancang untuk membantu pengguna dalam menemukan tren rambut dan merawat rambut pengguna dengan lebih baik. Website ini menawarkan berbagai fitur yang dirancang untuk
-                        memberikan pengalaman yang informatif dan interaktif bagi pengguna yang mencari rekomendasi tren gaya rambut yang sesuai dengan bentuk wajah dan jenis rambut melalui fitur chatbot. Selain itu, HairIdea juga
-                        menyediakan panduan perawatan rambut untuk menjaga kesehatan dan keindahan rambut.
+                        HairIdea adalah sebuah situs website yang dirancang untuk membantu pengguna dalam menemukan tren rambut dan merawat rambut pengguna dengan lebih baik. Website ini menawarkan berbagai fitur yang informatif dan
+                        interaktif bagi pengguna yang mencari rekomendasi tren gaya rambut, sesuai dengan bentuk wajah dan jenis rambut melalui fitur chatbot.
                       </p>
                     </div>
                   </div>
