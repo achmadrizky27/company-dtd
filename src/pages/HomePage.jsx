@@ -11,9 +11,9 @@ import Testimonial from "../components/Testimoni";
 
 // Projects
 import ArtificialIntelligence from "../projects/ArtificialIntelligence";
-import MachineLearning from "../projects/machinelearning";
-import MobileDevelopment from "../projects/mobiledev";
-import WebDevelopment from "../projects/webdev";
+import MachineLearning from "../projects/MachineLearning";
+import MobileDevelopment from "../projects/MobileDev";
+import WebDevelopment from "../projects/WebDev";
 
 const HomePage = () => {
   // Function -> Role Switcher
