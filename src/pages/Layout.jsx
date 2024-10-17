@@ -11,7 +11,6 @@ const Layout = ({ children }) => {
       <div className="container items-center justify-center mx-auto max-w-screen-xl">
         <main>{children}</main>
       </div>
-      {/* <FooterComponent /> */}
       <FooterComponent />
     </React.Fragment>
   );

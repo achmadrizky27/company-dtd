@@ -74,7 +74,7 @@ const Testimonial = () => {
       <div className="bg-white flex flex-col items-center p-5 rounded-md shadow-lg space-y-2">
         <img src={testimonials[currentTestimonial].image} alt={testimonials[currentTestimonial].author} className="w-28 object-cover" />
         <div className="space-y-2">
-          <p className="text-lg italic ">"{testimonials[currentTestimonial].text}"</p>
+          <p className="text-md">"{testimonials[currentTestimonial].text}"</p>
           <p className="text-right font-bold">{testimonials[currentTestimonial].author}</p>
         </div>
       </div>
