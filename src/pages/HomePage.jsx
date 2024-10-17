@@ -1,8 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
+
+// Pages
 import Layout from "./Layout";
+
+// Components
 import ConstPortfolioComponent from "../components/ConstPortfolioComponent";
+import Testimonial from "../components/Testimoni";
+
+// Projects
+import ArtificialIntelligence from "../projects/ArtificialIntelligence";
+import MachineLearning from "../projects/machinelearning";
+import MobileDevelopment from "../projects/mobiledev";
+import WebDevelopment from "../projects/webdev";
 
 const HomePage = () => {
   // Function -> Role Switcher
@@ -52,6 +63,20 @@ const HomePage = () => {
   });
 
   // Set Active -> Button Tools and Tech Stack
+  const [projects, setProject] = useState("ai");
+  const renderProject = () => {
+    if (projects === "ai") {
+      return <ArtificialIntelligence />;
+    } else if (projects === "ml") {
+      return <MachineLearning />;
+    } else if (projects === "md") {
+      return <MobileDevelopment />;
+    } else if (projects === "wd") {
+      return <WebDevelopment />;
+    }
+  };
+
+  // Set Active -> Button Tools and Tech Stack
   // const [toolsTechStack, setToolsTechStack] = useState("few-toolstechstack");
   // const renderToolsTechStack = () => {
   //   if (toolsTechStack === "few-toolstechstack") {
@@ -85,7 +110,7 @@ const HomePage = () => {
       {/* About - Done*/}
       <section id="about" className="font-poppins tracking-wider text-slate-700">
         <div className="flex flex-col gap-10 items-center justify-center max-w-7xl px-3 py-28 md:py-32 md:px-7">
-          {/* Row 1 */}
+          {/* Row 1 - Description Company */}
           <div className="flex flex-col gap-10 items-center justify-between w-full md:flex-row md:gap-0">
             <div className="flex flex-col gap-4 items-start justify-center w-full md:w-1/2">
               <p className="font-bold text-xl lg:text-2xl">
@@ -95,13 +120,16 @@ const HomePage = () => {
                 Perusahaan teknologi yang berwawasan ke depan, yang mengkhususkan diri dalam menyediakan produk dan solusi digital terdepan. Dengan keahlian dalam pengembangan aplikasi mobile, pengembangan web, pembelajaran mesin, serta
                 teknologi-teknologi mutakhir lainnya, kami berkomitmen untuk membantu bisnis dan individu berkembang di era digital.
               </p>
+              <Link to={"#service"} className="bg-blue-500 duration-300 px-4 py-1 rounded-full text-white hover:bg-blue-700 hover:translate-x-1">
+                Jasa Produk Kami?
+              </Link>
             </div>
             <div className="flex items-center justify-center w-full md:w-1/2">
               <img src="../profile/img-about.png" alt="img-about" className="w-72" />
             </div>
           </div>
 
-          {/* Row 2 */}
+          {/* Row 2 - Dashboard Count */}
           <div className="flex flex-col gap-4 font-bold items-center justify-between text-white w-full md:flex-row">
             <div className="bg-blue-500 flex items-center justify-center rounded-md w-full">
               <div className="p-4 text-center w-full">
@@ -122,12 +150,188 @@ const HomePage = () => {
               </div>
             </div>
           </div>
+
+          {/* Row 3 - Team Official */}
+          <div className="flex flex-col gap-4 items-center justify-around w-full">
+            <p className="font-bold text-xl md:text-2xl">Team Official</p>
+            <div className="flex flex-wrap gap-10 items-start justify-center w-auto md:flex-row">
+              {/* Fadilano Abraham */}
+              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto">
+                <div className="flex flex-col gap-1 items-center justify-center">
+                  <img src="../team-official/fadilano.png" alt="fadilano" className="rounded-full w-44" />
+                  <p className="font-bold text-xl">Fadilano Abraham</p>
+                  <p>Project Manager</p>
+                </div>
+                <hr className="border-2 border-blue-500 w-full" />
+                <div className="flex flex-col items-center justify-center w-60">
+                  <p>
+                    <ConstPortfolioComponent target={22} duration={5000} />
+                    <span className="">Tahun</span>
+                  </p>
+                  <p className="italic text-center text-sm">`If you're not a good shot today, don't worry. There are other ways to be usefull`</p>
+                </div>
+              </div>
+
+              {/* Raihan Darrel A */}
+              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto">
+                <div className="flex flex-col gap-1 items-center justify-center">
+                  <img src="../team-official/darrel.png" alt="darrel" className="rounded-full w-44" />
+                  <p className="font-bold text-xl">Raihan Darrel A</p>
+                  <p>System/Software Analyst</p>
+                </div>
+                <hr className="border-2 border-blue-500 w-full" />
+                <div className="flex flex-col items-center justify-center w-60">
+                  <p>
+                    <ConstPortfolioComponent target={20} duration={5000} />
+                    <span className="">Tahun</span>
+                  </p>
+                  <p className="italic text-center text-sm">`Orang yang terlihat tenang dengan isi kepala yang berisik`</p>
+                </div>
+              </div>
+
+              {/* Muhammad Ridwan */}
+              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto">
+                <div className="flex flex-col gap-1 items-center justify-center">
+                  <img src="../team-official/ridwan.png" alt="ridwan" className="rounded-full w-44" />
+                  <p className="font-bold text-xl">Muhammad Ridwan</p>
+                  <p>Software Designer</p>
+                </div>
+                <hr className="border-2 border-blue-500 w-full" />
+                <div className="flex flex-col items-center justify-center w-60">
+                  <p>
+                    <ConstPortfolioComponent target={21} duration={5000} />
+                    <span className="">Tahun</span>
+                  </p>
+                  <p className="italic text-center text-sm">`Lelaki tidak bercerita, tapi kabur ke kamboja`</p>
+                </div>
+              </div>
+
+              {/* Achmad Rizky */}
+              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto">
+                <div className="flex flex-col gap-1 items-center justify-center">
+                  <img src="../team-official/rizky.png" alt="rizky" className="rounded-full w-44" />
+                  <p className="font-bold text-xl">Achmad Rizky</p>
+                  <p>Programmer</p>
+                </div>
+                <hr className="border-2 border-blue-500 w-full" />
+                <div className="flex flex-col items-center justify-center w-60">
+                  <p>
+                    <ConstPortfolioComponent target={21} duration={5000} />
+                    <span className="">Tahun</span>
+                  </p>
+                  <p className="italic text-center text-sm">`King indo lolos piala dunia 2026`</p>
+                </div>
+              </div>
+
+              {/* M. Rayhan Pasyaputra */}
+              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto">
+                <div className="flex flex-col gap-1 items-center justify-center">
+                  <img src="../team-official/rayhan.png" alt="rayhan" className="rounded-full w-44" />
+                  <p className="font-bold text-xl">M. Rayhan Pasyaputra</p>
+                  <p>Tester</p>
+                </div>
+                <hr className="border-2 border-blue-500 w-full" />
+                <div className="flex flex-col items-center justify-center w-60">
+                  <p>
+                    <ConstPortfolioComponent target={21} duration={5000} />
+                    <span className="">Tahun</span>
+                  </p>
+                  <p className="italic text-center text-sm">`Setiap orang punya gilirannya masing - masing, jadi bersabarlah`</p>
+                </div>
+              </div>
+
+              {/* Rendi Irgi Ardiansyah */}
+              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto">
+                <div className="flex flex-col gap-1 items-center justify-center">
+                  <img src="../team-official/rendi.png" alt="rendi" className="rounded-full w-44" />
+                  <p className="font-bold text-xl"> Rendi Irgi Ardiansyah</p>
+                  <p>Technical Writer</p>
+                </div>
+                <hr className="border-2 border-blue-500 w-full" />
+                <div className="flex flex-col items-center justify-center w-60">
+                  <p>
+                    <ConstPortfolioComponent target={21} duration={5000} />
+                    <span className="">Tahun</span>
+                  </p>
+                  <p className="italic text-center text-sm">`Jangan mengusik kebebasanku dingin tetapi tidak kejam aku berlutut tidak akan`</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 4 - Mitra */}
+          <div className="flex flex-col gap-10 items-center justify-center w-auto">
+            <p className="font-bold text-3xl md:text-5xl">
+              <span className="text-blue-500">Partner</span> in Business
+            </p>
+            <div className="flex flex-wrap gap-10 items-center justify-around">
+              <img src="../patners/shopee.png" alt="shopee" />
+              <img src="../patners/kominfo.png" alt="kominfo" />
+              <img src="../patners/traveloka.png" alt="traveloka" />
+              <img src="../patners/bluebird.png" alt="bluebird" />
+              <img src="../patners/gojek.png" alt="gojek" />
+              <img src="../patners/garudaindonesia.png" alt="garudaindonesia  " />
+              <img src="../patners/tokopedia.png" alt="tokopedia" />
+              <img src="../patners/toyota.png" alt="toyota" />
+              <img src="../patners/unitedtractors.png" alt="unitedtractors" />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Service */}
-      <section id="service" className="font-poppins tracking-wider text-white">
-        <div className="bg-blue-300 flex flex-col gap-4 items-center justify-center max-w-7xl px-3 py-32 md:py-40 md:px-7"></div>
+      <section id="service" className="font-poppins tracking-wider text-slate-700 ">
+        <div className="flex flex-col gap-4 items-start justify-center max-w-7xl px-3 py-28 md:py-32 md:px-7">
+          <div className="flex flex-col items-center justify-center md:items-end md:justify-end md:text-end">
+            <p className="font-bold text-2xl md:text-5xl">
+              Jasa Pelayanan Kami, <span className="text-blue-500 text-4xl md:text-5xl">Produk Digital</span>
+            </p>
+          </div>
+          <div className="flex flex-col items-start justify-center gap-10 w-full md:flex-row">
+            <div className="bg-blue-100 flex flex-col items-center justify-center p-5 rounded-md text-white w-full md:w-72">
+              <Link
+                to={"#!"}
+                onClick={() => setProject("ai")}
+                className={`${
+                  projects === "ai" ? "active bg-blue-900 flex font-semibold items-center justify-center text-center" : "bg-blue-500 duration-300 flex items-center justify-center text-center hover:bg-blue-600"
+                } px-2 py-2 w-full `}
+              >
+                Artificial Intelligence
+              </Link>
+              <Link
+                to={"#!"}
+                onClick={() => setProject("ml")}
+                className={`${
+                  projects === "ml" ? "active bg-blue-900 flex font-semibold items-center justify-center text-center" : "bg-blue-500 duration-300 flex items-center justify-center text-center hover:bg-blue-600"
+                } px-2 py-2 w-full`}
+              >
+                Machine Learning
+              </Link>
+              <Link
+                to={"#!"}
+                onClick={() => setProject("md")}
+                className={`${
+                  projects === "md" ? "active bg-blue-900 flex font-semibold items-center justify-center text-center" : "bg-blue-500 duration-300 flex items-center justify-center text-center hover:bg-blue-600"
+                } px-2 py-2 w-full`}
+              >
+                Mobile Development
+              </Link>
+              <Link
+                to={"#!"}
+                onClick={() => setProject("wd")}
+                className={`${
+                  projects === "wd" ? "active bg-blue-900 flex font-semibold items-center justify-center text-center" : "bg-blue-500 duration-300 flex items-center justify-center text-center hover:bg-blue-600"
+                } px-2 py-2 w-full`}
+              >
+                Web Development
+              </Link>
+            </div>
+            <div className="border-2 flex items-center justify-center p-5 rounded-md w-full md:w-3/4">
+              <main>{renderProject()}</main>
+            </div>
+          </div>
+          <Testimonial />
+        </div>
       </section>
 
       {/* Project */}
