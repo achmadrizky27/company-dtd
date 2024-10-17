@@ -400,7 +400,7 @@ const HomePage = () => {
             <span className="text-blue-500">Highlight</span> Project
           </p>
           <div className="flex flex-col gap-10 items-center justify-center max-w-7xl mx-auto text-white w-full">
-            <div className="bg-white flex flex-wrap gap-4 items-center justify-center overflow-y-auto p-10 rounded-md shadow-lg w-full h-96">
+            <div className="md:bg-white flex flex-wrap gap-4 items-center justify-center overflow-y-auto md:p-10 rounded-md md:shadow-lg w-full h-96">
               {/* E - Mading JWP */}
               <div className="w-auto" onClick={() => handlePopup("emading")}>
                 <div className="bg-blue-500 cursor-pointer duration-300 flex flex-col gap-3 group p-5 rounded-md relative lg:flex-row hover:p-6">
