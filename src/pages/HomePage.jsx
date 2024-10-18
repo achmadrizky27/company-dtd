@@ -24,25 +24,7 @@ import ComputerVision from "../projects/ComputerVision";
 const HomePage = () => {
   // AOS Animation
   useEffect(() => {
-    Aos.init({
-      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-      initClassName: "aos-init", // class applied after initialization
-      animatedClassName: "aos-animate", // class applied on animation
-      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-      offset: 150, // offset (in px) from the original trigger point
-      delay: 0, // values from 0 to 3000, with step 50ms
-      duration: 500, // values from 0 to 3000, with step 50ms
-      easing: "ease", // default easing for AOS animations
-      once: false, // whether animation should happen only once - while scrolling down
-      mirror: false, // whether elements should animate out while scrolling past them
-      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
-    });
+    Aos.init();
   }, []);
 
   // Function -> Role Switcher
@@ -145,14 +127,14 @@ const HomePage = () => {
           {/* Row 1 - Description Company */}
           <div className="flex flex-col gap-10 items-center justify-between w-full md:flex-row md:gap-0">
             <div className="flex flex-col gap-4 items-start justify-center w-full md:w-1/2">
-              <p className="font-bold text-3xl lg:text-4xl" data-aos="fade-down">
+              <p className="font-bold text-3xl lg:text-4xl" data-aos-duration="500" data-aos-offset="150" data-aos="fade-down">
                 A Brief Insight <span className="text-blue-500">Drafire Tech Development</span>
               </p>
-              <p className="border-2 border-blue-500 p-4 rounded-md text-justify" data-aos="fade-right">
+              <p className="border-2 border-blue-500 p-4 rounded-md text-justify" data-aos-duration="500" data-aos-offset="150" data-aos="fade-right">
                 A forward-thinking technology company specializing in delivering cutting-edge digital products and solutions. With expertise in mobile application development, web development, machine learning, and other advanced
                 technologies, we are committed to helping businesses and individuals thrive in the digital era.
               </p>
-              <div className="flex items-center gap-4 w-full" data-aos="fade-up">
+              <div className="flex items-center gap-4 w-full" data-aos-duration="500" data-aos-offset="150" data-aos="fade-up">
                 <Link to={"#service"} className="bg-blue-500 duration-300 px-6 py-2 rounded-md text-white w-auto hover:bg-blue-700 hover:translate-x-1">
                   Our Service?
                 </Link>
@@ -180,13 +162,13 @@ const HomePage = () => {
                 </animated.div>
               </div>
             </div>
-            <div className="flex items-center justify-center w-full md:w-1/2" data-aos="flip-left">
+            <div className="flex items-center justify-center w-full md:w-1/2" data-aos-duration="500" data-aos-offset="150" data-aos="flip-left">
               <img src="../profile/img-about.png" alt="img-about" className="w-72" />
             </div>
           </div>
 
           {/* Row 2 - Dashboard Count */}
-          <div className="flex flex-col gap-4 font-bold items-center justify-between text-white w-full md:flex-row" data-aos="fade-down">
+          <div className="flex flex-col gap-4 font-bold items-center justify-between text-white w-full md:flex-row" data-aos-duration="500" data-aos-offset="150" data-aos="fade-down">
             <div className="bg-blue-500 flex items-center justify-center rounded-md w-full">
               <div className="p-4 text-center w-full">
                 <p>Founded On The Date</p>
@@ -209,12 +191,12 @@ const HomePage = () => {
 
           {/* Row 3 - Team Officials */}
           <div className="flex flex-col gap-10 items-center justify-around w-auto">
-            <p className="font-bold text-3xl md:text-4xl" data-aos="fade-down">
+            <p className="font-bold text-3xl md:text-4xl" data-aos-duration="500" data-aos-offset="150" data-aos="fade-down">
               Team <span className="text-blue-500">Official</span>
             </p>
             <div className="flex flex-wrap gap-10 items-start justify-center w-auto md:flex-row">
               {/* Fadilano Abraham */}
-              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos="fade-down-right">
+              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos-duration="500" data-aos-offset="150" data-aos="fade-down-right">
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <img src="../team-official/fadilano.png" alt="fadilano" className="rounded-full w-44" />
                   <p className="font-bold text-xl">Fadilano Abraham</p>
@@ -231,7 +213,7 @@ const HomePage = () => {
               </div>
 
               {/* Raihan Darrel A */}
-              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos="fade-down">
+              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos-duration="500" data-aos-offset="150" data-aos="fade-down">
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <img src="../team-official/darrel.png" alt="darrel" className="rounded-full w-44" />
                   <p className="font-bold text-xl">Raihan Darrel A</p>
@@ -248,7 +230,7 @@ const HomePage = () => {
               </div>
 
               {/* Muhammad Ridwan */}
-              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos="fade-down-left">
+              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos-duration="500" data-aos-offset="150" data-aos="fade-down-left">
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <img src="../team-official/ridwan.png" alt="ridwan" className="rounded-full w-44" />
                   <p className="font-bold text-xl">Muhammad Ridwan</p>
@@ -265,7 +247,7 @@ const HomePage = () => {
               </div>
 
               {/* Achmad Rizky */}
-              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos="fade-up-right">
+              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos-duration="500" data-aos-offset="150" data-aos="fade-up-right">
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <img src="../team-official/rizky.png" alt="rizky" className="rounded-full w-44" />
                   <p className="font-bold text-xl">Achmad Rizky</p>
@@ -282,7 +264,7 @@ const HomePage = () => {
               </div>
 
               {/* M. Rayhan Pasyaputra */}
-              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos="fade-up">
+              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos-duration="500" data-aos-offset="150" data-aos="fade-up">
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <img src="../team-official/rayhan.png" alt="rayhan" className="rounded-full w-44" />
                   <p className="font-bold text-xl">M. Rayhan Pasyaputra</p>
@@ -299,7 +281,7 @@ const HomePage = () => {
               </div>
 
               {/* Rendi Irgi Ardiansyah */}
-              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos="fade-up-left">
+              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos-duration="500" data-aos-offset="150" data-aos="fade-up-left">
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <img src="../team-official/rendi.png" alt="rendi" className="rounded-full w-44" />
                   <p className="font-bold text-xl"> Rendi Irgi Ardiansyah</p>
@@ -319,19 +301,19 @@ const HomePage = () => {
 
           {/* Row 4 - Partners */}
           <div className="flex flex-col gap-10 items-center justify-center w-auto">
-            <p className="font-bold text-3xl md:text-4xl" data-aos="fade-down">
+            <p className="font-bold text-3xl md:text-4xl" data-aos-duration="500" data-aos-offset="150" data-aos="fade-down">
               <span className="text-blue-500">Partner</span> in Business
             </p>
-            <div className="flex flex-wrap gap-10 items-center justify-around" data-aos="fade-down">
-              <img src="../patners/shopee.png" alt="shopee" data-aos="fade-up-right" />
-              <img src="../patners/kominfo.png" alt="kominfo" data-aos="fade-up-right" />
-              <img src="../patners/traveloka.png" alt="traveloka" data-aos="fade-down-left" />
-              <img src="../patners/bluebird.png" alt="bluebird" data-aos="fade-down-left" />
-              <img src="../patners/gojek.png" alt="gojek" data-aos="fade-right" />
-              <img src="../patners/garudaindonesia.png" alt="garudaindonesia  " data-aos="zoom-in" />
-              <img src="../patners/tokopedia.png" alt="tokopedia" data-aos="fade-left" />
-              <img src="../patners/toyota.png" alt="toyota" data-aos="fade-up" />
-              <img src="../patners/unitedtractors.png" alt="unitedtractors" data-aos="fade-up" />
+            <div className="flex flex-wrap gap-10 items-center justify-around" data-aos-duration="500" data-aos-offset="150" data-aos="fade-down">
+              <img src="../patners/shopee.png" alt="shopee" data-aos-duration="500" data-aos-offset="150" data-aos="fade-up-right" />
+              <img src="../patners/kominfo.png" alt="kominfo" data-aos-duration="500" data-aos-offset="150" data-aos="fade-up-right" />
+              <img src="../patners/traveloka.png" alt="traveloka" data-aos-duration="500" data-aos-offset="150" data-aos="fade-down-left" />
+              <img src="../patners/bluebird.png" alt="bluebird" data-aos-duration="500" data-aos-offset="150" data-aos="fade-down-left" />
+              <img src="../patners/gojek.png" alt="gojek" data-aos-duration="500" data-aos-offset="150" data-aos="fade-right" />
+              <img src="../patners/garudaindonesia.png" alt="garudaindonesia  " data-aos-duration="500" data-aos-offset="150" data-aos="zoom-in" />
+              <img src="../patners/tokopedia.png" alt="tokopedia" data-aos-duration="500" data-aos-offset="150" data-aos="fade-left" />
+              <img src="../patners/toyota.png" alt="toyota" data-aos-duration="500" data-aos-offset="150" data-aos="fade-up" />
+              <img src="../patners/unitedtractors.png" alt="unitedtractors" data-aos-duration="500" data-aos-offset="150" data-aos="fade-up" />
             </div>
           </div>
         </div>
@@ -341,12 +323,12 @@ const HomePage = () => {
       <section id="service" className="font-poppins tracking-wider text-slate-700 ">
         <div className="bg-blue-100 flex flex-col gap-10 items-start justify-center max-w-7xl px-3 py-28 md:py-32 md:px-7">
           <div className="flex flex-col items-center justify-center md:items-end md:justify-end md:text-end">
-            <p className="font-bold text-3xl md:text-4xl" data-aos="fade-down">
+            <p className="font-bold text-3xl md:text-4xl" data-aos-duration="500" data-aos-offset="150" data-aos="fade-down">
               Our Services, <span className="text-blue-500">Digital Product</span>
             </p>
           </div>
           <div className="bg-white flex flex-col items-start justify-center gap-10 p-5 rounded-md shadow-lg w-full md:flex-row">
-            <div className="border-2 border-blue-500 flex flex-col items-center justify-center rounded-md w-full md:w-72" data-aos="fade-right">
+            <div className="border-2 border-blue-500 flex flex-col items-center justify-center rounded-md w-full md:w-72" data-aos-duration="500" data-aos-offset="150" data-aos="fade-right">
               <Link
                 to={"#!"}
                 onClick={() => setProject("ai")}
@@ -411,7 +393,7 @@ const HomePage = () => {
                 Natural Language Processing
               </Link>
             </div>
-            <div className="flex items-center justify-center rounded-md w-full md:w-3/4" data-aos="zoom-in">
+            <div className="flex items-center justify-center rounded-md w-full md:w-3/4" data-aos-duration="500" data-aos-offset="150" data-aos="zoom-in">
               <main>{renderProject()}</main>
             </div>
           </div>
@@ -420,7 +402,7 @@ const HomePage = () => {
       </section>
 
       {/* Project - Done */}
-      <section id="project" className="font-poppins tracking-wider text-slate-700" data-aos="fade-down">
+      <section id="project" className="font-poppins tracking-wider text-slate-700" data-aos-duration="500" data-aos-offset="150" data-aos="fade-down">
         <div className="bg-blue-100 flex flex-col gap-10 items-center justify-center max-w-7xl px-3 py-28 md:py-32 md:px-7">
           <p className="font-bold text-3xl md:text-4xl">
             <span className="text-blue-500">Highlight</span> Project
