@@ -125,15 +125,15 @@ const HomePage = () => {
       {/* Home - Done */}
       <section id="home" className="font-poppins tracking-wider text-white">
         <div className="bg-home flex flex-col gap-4 items-start justify-center max-w-7xl px-3 min-h-screen md:px-7">
-          <div className="flex flex-col gap-2 w-full md:w-1/2" data-aos="fade-right">
+          <animated.div style={translateY} className="flex flex-col gap-2 w-full md:w-1/2">
             <p className="font-bold text-4xl md:text-5xl">Grafire Tech Development</p>
             <p className="font-bold text-2xl md:text-3xl">
               Digital Product, <RoleSwitcher />{" "}
             </p>
             <hr className="border-2  w-full" />
             <p className="text-md">Digital Product Innovation for the Future of Indonesia</p>
-          </div>
-          <Link to={"#about"} className="bg-blue-500 duration-300 px-6 py-2 rounded-md hover:bg-blue-700 hover:translate-x-1" data-aos="fade-right">
+          </animated.div>
+          <Link to={"#about"} className="bg-blue-500 duration-300 px-6 py-2 rounded-md hover:bg-blue-700 hover:translate-x-1">
             Who we are?
           </Link>
         </div>
