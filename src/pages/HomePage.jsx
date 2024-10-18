@@ -23,10 +23,7 @@ import ComputerVision from "../projects/ComputerVision";
 const HomePage = () => {
   // AOS Animation
   useEffect(() => {
-    Aos.init({
-      duration: 1000, // durasi animasi
-      once: true, // animasi hanya terjadi sekali
-    });
+    Aos.init();
   }, []);
 
   // Function -> Role Switcher
