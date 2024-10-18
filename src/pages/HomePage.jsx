@@ -200,7 +200,7 @@ const HomePage = () => {
                 <div className="flex flex-col items-center justify-center w-60">
                   <p>
                     <ConstPortfolioComponent target={22} duration={5000} />
-                    <span className="">Tahun</span>
+                    <span className="">Year</span>
                   </p>
                   <p className="italic text-center text-sm">`If you're not a good shot today, don't worry. There are other ways to be usefull`</p>
                 </div>
@@ -217,7 +217,7 @@ const HomePage = () => {
                 <div className="flex flex-col items-center justify-center w-60">
                   <p>
                     <ConstPortfolioComponent target={20} duration={5000} />
-                    <span className="">Tahun</span>
+                    <span className="">Year</span>
                   </p>
                   <p className="italic text-center text-sm">`Orang yang terlihat tenang dengan isi kepala yang berisik`</p>
                 </div>
@@ -234,7 +234,7 @@ const HomePage = () => {
                 <div className="flex flex-col items-center justify-center w-60">
                   <p>
                     <ConstPortfolioComponent target={21} duration={5000} />
-                    <span className="">Tahun</span>
+                    <span className="">Year</span>
                   </p>
                   <p className="italic text-center text-sm">`Lelaki tidak bercerita, tapi kabur ke kamboja`</p>
                 </div>
@@ -251,7 +251,7 @@ const HomePage = () => {
                 <div className="flex flex-col items-center justify-center w-60">
                   <p>
                     <ConstPortfolioComponent target={21} duration={5000} />
-                    <span className="">Tahun</span>
+                    <span className="">Year</span>
                   </p>
                   <p className="italic text-center text-sm">`King indo lolos piala dunia 2026`</p>
                 </div>
@@ -268,7 +268,7 @@ const HomePage = () => {
                 <div className="flex flex-col items-center justify-center w-60">
                   <p>
                     <ConstPortfolioComponent target={21} duration={5000} />
-                    <span className="">Tahun</span>
+                    <span className="">Year</span>
                   </p>
                   <p className="italic text-center text-sm">`Setiap orang punya gilirannya masing - masing, jadi bersabarlah`</p>
                 </div>
@@ -285,7 +285,7 @@ const HomePage = () => {
                 <div className="flex flex-col items-center justify-center w-60">
                   <p>
                     <ConstPortfolioComponent target={21} duration={5000} />
-                    <span className="">Tahun</span>
+                    <span className="">Year</span>
                   </p>
                   <p className="italic text-center text-sm">`Jangan mengusik kebebasanku dingin tetapi tidak kejam aku berlutut tidak akan`</p>
                 </div>
