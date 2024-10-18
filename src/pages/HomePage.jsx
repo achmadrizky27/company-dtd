@@ -24,7 +24,10 @@ import ComputerVision from "../projects/ComputerVision";
 const HomePage = () => {
   // AOS Animation
   useEffect(() => {
-    Aos.init();
+    Aos.init({
+      duration: 1000, // durasi animasi
+      once: true, // animasi hanya terjadi sekali
+    });
   }, []);
 
   // Function -> Role Switcher
@@ -110,9 +113,9 @@ const HomePage = () => {
           <div className="flex flex-col gap-2 w-full md:w-1/2">
             <p className="font-bold text-4xl md:text-5xl">Grafire Tech Development</p>
             <p className="font-bold text-2xl md:text-3xl">
-              Digital Product, <RoleSwitcher />{" "}
+              Digital Product, <RoleSwitcher />
             </p>
-            <hr className="border-2  w-full" />
+            <hr className="border-2 w-full" />
             <p className="text-md">Digital Product Innovation for the Future of Indonesia</p>
           </div>
           <Link to={"#about"} className="bg-blue-500 duration-300 px-6 py-2 rounded-md hover:bg-blue-700 hover:translate-x-1">
