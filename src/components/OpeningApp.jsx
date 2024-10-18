@@ -23,7 +23,7 @@ function OpeningApp() {
           <div className="flex flex-col gap-4 items-center justify-center text-center text-white">
             <img src="../profile/logo-non-bg.png" alt="logo-non-bg" className="w-32 md:w-52 animate-bounce" />
             <p className="text-2xl font-bold">
-              Welcome to <span className="text-blue-300">PT. Grafire Tech Development</span>
+              Welcome to <span className="text-blue-300">PT. Drafire Tech Development</span>
             </p>
           </div>
         </div>

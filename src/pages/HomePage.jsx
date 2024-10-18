@@ -102,7 +102,7 @@ const HomePage = () => {
       <section id="home" className="font-poppins tracking-wider text-white">
         <div className="bg-home flex flex-col gap-4 items-start justify-center max-w-7xl px-3 min-h-screen md:px-7">
           <div className="flex flex-col gap-2 w-full md:w-1/2" data-aos-duration="500" data-aos-offset="150" data-aos="zoom-in-down">
-            <p className="font-bold text-4xl md:text-5xl">Grafire Tech Development</p>
+            <p className="font-bold text-4xl md:text-5xl">Drafire Tech Development</p>
             <p className="font-bold text-2xl md:text-3xl">
               Digital Product, <RoleSwitcher />
             </p>

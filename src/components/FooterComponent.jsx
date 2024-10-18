@@ -46,7 +46,7 @@ const FooterComponent = () => {
           <div className="flex flex-col gap-4">
             {/* Social Media */}
             <div className="flex items-center justify-between">
-              <p>Address</p>
+              <p>PT. Drafire Tech Development</p>
               <animated.div style={translateY} className="flex items-center gap-4">
                 <a href="/" className="duration-300 hover:bg-blue-500 hover:p-5 hover:rounded-full">
                   <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
