@@ -183,60 +183,76 @@ const HomePage = () => {
             </div>
           </div>
 
-          {/* Row 3 - Team Officials */}
-          <div className="flex flex-col gap-10 items-center justify-around w-auto">
+          {/* Row 3 - Direktur Utama / CEO */}
+          <div className="flex flex-col gap-10 items-center justify-around w-full">
             <p className="font-bold text-3xl md:text-4xl" data-aos-duration="500" data-aos-offset="150" data-aos="zoom-in">
-              Team <span className="text-blue-500">Official</span>
+              Founder <span className="text-blue-500">& CEO</span>
             </p>
-            <div className="flex flex-wrap gap-10 items-start justify-center w-auto md:flex-row">
+            <div className="flex flex-wrap gap-10 items-start justify-center w-full md:flex-row">
               {/* Fadilano Abraham */}
               <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos-duration="500" data-aos-offset="150" data-aos="zoom-in">
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <img src="../team-official/fadilano.png" alt="fadilano" className="rounded-full w-44" />
                   <p className="font-bold text-xl">Fadilano Abraham</p>
-                  <p>Project Manager</p>
+                  <p>Founder & Chief Executive Officer</p>
                 </div>
                 <hr className="border-2 border-blue-500 w-full" />
                 <div className="flex flex-col items-center justify-center w-60">
                   <p>
-                    <ConstPortfolioComponent target={22} duration={5000} />
+                    <ConstPortfolioComponent target={22} duration={1500} />
                     <span className="">Year</span>
                   </p>
                   <p className="italic text-center text-sm">`If you're not a good shot today, don't worry. There are other ways to be usefull`</p>
                 </div>
               </div>
+            </div>
+          </div>
 
+          {/* Row 4 - Project Manajer */}
+          <div className="flex flex-col gap-10 items-center justify-around w-auto">
+            <p className="font-bold text-3xl md:text-4xl" data-aos-duration="500" data-aos-offset="150" data-aos="zoom-in">
+              Project <span className="text-blue-500">Manager</span>
+            </p>
+            <div className="flex flex-wrap gap-10 items-start justify-center w-auto md:flex-row">
+              {/* Muhammad Ridwan */}
+              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos-duration="500" data-aos-offset="150" data-aos="zoom-in">
+                <div className="flex flex-col gap-1 items-center justify-center text-center">
+                  <img src="../team-official/ridwan.png" alt="ridwan" className="rounded-full w-44" />
+                  <p className="font-bold text-xl">Muhammad Ridwan</p>
+                  <p>Project Manajer | Manager Software Designer</p>
+                </div>
+                <hr className="border-2 border-blue-500 w-full" />
+                <div className="flex flex-col items-center justify-center w-60">
+                  <p>
+                    <ConstPortfolioComponent target={21} duration={1500} />
+                    <span className="">Year</span>
+                  </p>
+                  <p className="italic text-center text-sm">`Lelaki tidak bercerita, tapi kabur ke kamboja`</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 5 - Team Officials */}
+          <div className="flex flex-col gap-10 items-center justify-around w-auto">
+            <p className="font-bold text-3xl md:text-4xl" data-aos-duration="500" data-aos-offset="150" data-aos="zoom-in">
+              Team <span className="text-blue-500">Officials</span>
+            </p>
+            <div className="flex flex-wrap gap-10 items-start justify-center w-auto md:flex-row">
               {/* Raihan Darrel A */}
               <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos-duration="500" data-aos-offset="150" data-aos="zoom-in">
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <img src="../team-official/darrel.png" alt="darrel" className="rounded-full w-44" />
                   <p className="font-bold text-xl">Raihan Darrel A</p>
-                  <p>System/Software Analyst</p>
+                  <p>Manager System/Software Analyst</p>
                 </div>
                 <hr className="border-2 border-blue-500 w-full" />
                 <div className="flex flex-col items-center justify-center w-60">
                   <p>
-                    <ConstPortfolioComponent target={20} duration={5000} />
+                    <ConstPortfolioComponent target={20} duration={1500} />
                     <span className="">Year</span>
                   </p>
                   <p className="italic text-center text-sm">`Orang yang terlihat tenang dengan isi kepala yang berisik`</p>
-                </div>
-              </div>
-
-              {/* Muhammad Ridwan */}
-              <div className="border-2 border-blue-500 flex flex-col gap-1 items-center p-5 rounded-md w-full md:w-auto" data-aos-duration="500" data-aos-offset="150" data-aos="zoom-in">
-                <div className="flex flex-col gap-1 items-center justify-center">
-                  <img src="../team-official/ridwan.png" alt="ridwan" className="rounded-full w-44" />
-                  <p className="font-bold text-xl">Muhammad Ridwan</p>
-                  <p>Software Designer</p>
-                </div>
-                <hr className="border-2 border-blue-500 w-full" />
-                <div className="flex flex-col items-center justify-center w-60">
-                  <p>
-                    <ConstPortfolioComponent target={21} duration={5000} />
-                    <span className="">Year</span>
-                  </p>
-                  <p className="italic text-center text-sm">`Lelaki tidak bercerita, tapi kabur ke kamboja`</p>
                 </div>
               </div>
 
@@ -245,12 +261,12 @@ const HomePage = () => {
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <img src="../team-official/rizky.png" alt="rizky" className="rounded-full w-44" />
                   <p className="font-bold text-xl">Achmad Rizky</p>
-                  <p>Programmer</p>
+                  <p>Manager Programmer</p>
                 </div>
                 <hr className="border-2 border-blue-500 w-full" />
                 <div className="flex flex-col items-center justify-center w-60">
                   <p>
-                    <ConstPortfolioComponent target={21} duration={5000} />
+                    <ConstPortfolioComponent target={21} duration={1500} />
                     <span className="">Year</span>
                   </p>
                   <p className="italic text-center text-sm">`King indo lolos piala dunia 2026`</p>
@@ -262,12 +278,12 @@ const HomePage = () => {
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <img src="../team-official/rayhan.png" alt="rayhan" className="rounded-full w-44" />
                   <p className="font-bold text-xl">M. Rayhan Pasyaputra</p>
-                  <p>Tester</p>
+                  <p>Manager Tester</p>
                 </div>
                 <hr className="border-2 border-blue-500 w-full" />
                 <div className="flex flex-col items-center justify-center w-60">
                   <p>
-                    <ConstPortfolioComponent target={21} duration={5000} />
+                    <ConstPortfolioComponent target={21} duration={1500} />
                     <span className="">Year</span>
                   </p>
                   <p className="italic text-center text-sm">`Setiap orang punya gilirannya masing - masing, jadi bersabarlah`</p>
@@ -279,12 +295,12 @@ const HomePage = () => {
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <img src="../team-official/rendi.png" alt="rendi" className="rounded-full w-44" />
                   <p className="font-bold text-xl"> Rendi Irgi Ardiansyah</p>
-                  <p>Technical Writer</p>
+                  <p>Manager Technical Writer</p>
                 </div>
                 <hr className="border-2 border-blue-500 w-full" />
                 <div className="flex flex-col items-center justify-center w-60">
                   <p>
-                    <ConstPortfolioComponent target={21} duration={5000} />
+                    <ConstPortfolioComponent target={21} duration={1500} />
                     <span className="">Year</span>
                   </p>
                   <p className="italic text-center text-sm">`Jangan mengusik kebebasanku dingin tetapi tidak kejam aku berlutut tidak akan`</p>
@@ -293,7 +309,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          {/* Row 4 - Partners */}
+          {/* Row 6 - Partners */}
           <div className="flex flex-col gap-10 items-center justify-center w-auto">
             <p className="font-bold text-3xl md:text-4xl" data-aos-duration="500" data-aos-offset="150" data-aos="zoom-in">
               <span className="text-blue-500">Partner</span> in Business
